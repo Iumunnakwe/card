@@ -1,0 +1,951 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    overflow-x: hidden;
+
+}
+
+
+
+.container {
+    width: 100vw;  /* Full width of the viewport */
+    max-width: 2000px;  /* Limits the maximum width */
+    height: 55vh;  /* 40% of the viewport height */
+    background-image: url(header.jpeg);
+    background-size: 100% 100%;  /* Makes the image stretch horizontally, and adjusts height to maintain aspect ratio */
+    background-repeat: no-repeat;  /* Prevents the image from repeating */
+    background-position: center center;  /* Centers the image */
+    display: flex;  /* Enables flexbox */
+    justify-content: center;  /* Center content horizontally */
+    align-items: center;  /* Center content vertically */
+    text-align: center;  /* Centers text inside the container */
+    font-size: 30px;
+    color: white;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    margin-bottom: 20px;
+    overflow-x: hidden;
+}
+
+  
+/* Left Navigation Menu Styling */
+.prpl-left-menu {
+    width: 250px;  /* Menu width */
+    background-color: #f4f4f4;
+    padding: 20px;
+    position: fixed;  /* Keeps the menu fixed on the left side */
+    top: 0;
+    left: 0;
+    bottom: 0;
+    z-index: 100;  /* Ensures the menu is above the rest of the content */
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Styling for the List */
+.prpl-left-menu > ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* Styling for each menu item */
+.prpl-left-menu > ul > li {
+    margin-bottom: 1em;
+    border-bottom: 1px solid #DDDDE2;
+}
+
+/* Styling for the links inside the list items */
+.prpl-left-menu > ul > li > a {
+    color: #333;
+    font-weight: 400;
+    display: block;
+    padding: 0.5em 1em;
+    text-decoration: none;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Active/Current Page Styling */
+.prpl-left-menu > ul > li.current-page {
+    position: relative;
+}
+
+.prpl-left-menu > ul > li.current-page:before {
+    display: block;
+    position: absolute;
+    z-index: -1;
+    content: " ";
+    width: 0.5em;
+    /* background-color: #D1190D; */
+    left: 0;
+    top: 0;
+    bottom: 0;
+}
+
+/* Change style for current page link */
+.prpl-left-menu > ul > li.current-page > a {
+    color: #333;
+    font-weight: 700;
+    padding-left: 1em;
+    /* border-left: 0.5em solid green; */
+}
+
+/* Hover effect for links */
+.prpl-left-menu > ul > li > a:hover {
+    background-color: #ddd;
+    /* color: #D1190D; */
+}
+
+
+header {
+    background: #333;
+    color: white;
+    padding: 1em 0;
+}
+
+/* Button Container - 2x4 Grid Layout */
+.button-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4 equal columns */
+  gap: 20px; /* Space between grid items */
+  margin: 20px 0;
+  padding: 10px;
+}
+
+/* Each Button Styling */
+.button-container a {
+  display: block;
+  width: 100%;
+  text-decoration: none !important;
+
+}
+
+
+.button-container .background-holder {
+  display: flex;
+  width: 100%;
+  height: 200px; /* Set fixed height for each button */
+  border-radius: 10px;
+  overflow: hidden;
+  position: relative;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease-in-out;
+}
+
+/* Split Button Effect */
+.button-container .split-button {
+  display: flex;
+  width: 100%;
+  height: 100%;
+}
+
+.button-container .split-button .left, 
+.button-container .split-button .right {
+  width: 50%; /* Each side takes 50% of the button */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 16px;
+  font-weight: bold;
+  color: white;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+/* Left side button has slightly darker overlay */
+.button-container .split-button .left {
+  background-color: rgba(0, 0, 0, 0.5); /* Dark overlay */
+}
+
+.button-container .split-button .right {
+  background-color: rgba(0, 0, 0, 0.5); /* Dark overlay */
+}
+
+/* 3D Hover Effect */
+.button-container .split-button .left:hover,
+.button-container .split-button .right:hover {
+  background-color: rgba(0, 0, 0, 0.3);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+  transform: translateY(-3px); /* Lift effect */
+}
+
+/* 3D Effect on Click */
+.button-container .split-button .left:active,
+.button-container .split-button .right:active {
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+  transform: translateY(2px); /* Press down effect */
+}
+
+/* Optional: Background Image Styling */
+.button-container .background-holder {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* Button Container: Hover Effect */
+.button-container .background-holder:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+
+
+/* Parent container for the image and text content */
+.prpl-band {
+  display: flex; /* Flexbox layout */
+  align-items: stretch; /* Ensure both image and text stretch to the same height */
+  justify-content: space-between; /* No space between the image and text */
+  gap: 0; /* Remove any extra space between image and text */
+  padding: 90;
+  height: 100%; /* Ensures the height of the parent container stretches */
+}
+
+/* Style for the image wrapper */
+.image-wrapper {
+  width: 50%; /* Image takes up half of the container */
+  height: 100%; /* Ensure the image container takes full height */
+  display: flex; /* To make the image fill the height */
+  justify-content: center; /* Centers the image horizontally */
+  align-items: center; /* Centers the image vertically */
+}
+
+/* Style for the image */
+.mlt-responsive-image {
+  width: 100%; /* Make the image responsive */
+  height: 100%; /* Make the image take the full height */
+  object-fit: cover; /* Ensures the image fills the space */
+}
+
+/* Style for the text content */
+.text-content {
+  width: 50%; /* Text takes up the other half of the container */
+  height: 100%; /* Ensure the text container takes full height */
+  padding: 90px 60px; /* Adjusted padding to make the text align better */
+  font-size: 18px; /* Set font size for readability */
+  line-height: 1.9; /* Adjust line height for readability */
+  color: #333; /* Set text color */
+  background-color: #F7F8FC;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Centers the text vertically */
+  /*box-sizing: border-box; /* Ensures padding is included in the width and height */
+  flex-grow: 1; /* Ensures the text container grows to match the height of the image */
+}
+
+
+
+.prpl-band .text-content {
+  height: auto;
+  min-height: 100%;
+}
+/* When the image is on the left */
+.image-left {
+  flex-direction: row; /* Image on the left, text on the right */
+}
+
+/* When the image is on the right */
+.image-right {
+  flex-direction: row-reverse; /* Image on the right, text on the left */
+}
+
+/* Optional: Responsive behavior (for smaller screens) */
+@media (max-width: 768px) {
+  .prpl-band {
+    flex-direction: column; /* Stacks image and text vertically */
+    text-align: center;
+  }
+
+  .image-wrapper, .text-content {
+    width: 100%; /* Both image and text take full width on small screens */
+    margin: 0 0 20px 0; /* Adds space below the image and text */
+    height: auto; /* Auto height for smaller screens */
+  }
+
+  .text-content {
+    font-size: 16px; /* Reduces font size for mobile */
+    padding: 15px; /* Reduces padding for mobile */
+  }
+}
+
+.text-content h2 {
+    font-size: 24px; /* Set heading size */
+    margin-bottom: 20px; /* Add space below the heading */
+    color: #000; /* Set heading color */
+}
+
+.text-content p, .text-content ul {
+    margin-bottom: 20px; /* Add space below paragraphs and lists */
+}
+
+.text-content ul {
+    list-style-type: disc; /* Use bullet points for lists */
+    padding-left: 1.5em; /* Add padding to align bullets */
+    margin: 1em 0em;
+    position: relative;
+}
+
+.text-content ul li {
+  list-style-type: disc; /* Use bullet points for lists */
+  padding-left: 20px; /* Add padding to align bullets */
+  margin: 1em 0em;
+  position: relative;
+}
+
+.text-content a {
+    color: green; /* Set link color */
+    text-decoration: none; /* Remove underline */
+}
+
+.text-content a:hover {
+    text-decoration: underline; /* Add underline on hover */
+}
+  
+  
+
+
+
+.prpl-band .image-wrapper img {
+    vertical-align: bottom;
+    width: 100%;
+    height: auto;
+}
+  
+
+.background-holder {
+    position: relative;
+    width: 100%;
+    height: 250px; /* Set a fixed height for the background */
+    background-size: cover;
+    background-position: center;
+    border-radius: 8px;
+    overflow: hidden; /* Ensures the image fits within the div */
+    transition: transform 0.3s ease; /* Smooth zoom-in effect */
+}
+
+.background-holder:hover {
+    transform: scale(1.1); /* Zooms in the background on hover */
+}
+
+.background-holder button {
+    position: absolute;
+    bottom: 10px; /* Adjust button position */
+    left: 50%;
+    transform: translateX(-50%); /* Centers the button horizontally */
+   /* padding: 15px 20px;*/
+    font-size: 16px;
+    color: white;
+    background-color: rgba(0, 0, 0, 0); /* Semi-transparent background for the button */
+    border: none;
+    cursor: pointer;
+    text-align: center;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.background-holder button:hover {
+    background-color: rgba(0, 0, 0, 0.7); /* Darkens button on hover */
+}
+
+@media (max-width: 768px) {
+    .button-container {
+        grid-template-columns: 1fr; /* Stacks buttons on smaller screens */
+    }
+    
+    .background-holder {
+        height: 120px; /* Adjust height for smaller screens */
+    }
+}
+
+
+
+  /* Optional: Responsive behavior (for smaller screens) */
+  @media (max-width: 768px) {
+    .prpl-band {
+      flex-direction: column; /* Stacks image and text vertically */
+      text-align: center;
+    }
+  
+    .image-wrapper {
+      width: 100%; /* Makes the image take full width on small screens */
+      margin: 0 0 20px 0; /* Adds space below the image */
+    }
+  
+    .text-content {
+      width: 100%; /* Text takes full width on small screens */
+      margin: 0 0 20px 0; /* Adds space below the text */
+      font-size: 16px; /* Reduces the font size for mobile */
+      padding: 15px; /* Reduces padding on mobile */
+    }
+  }
+
+  
+  
+
+
+
+
+
+
+
+  ul.menu {
+    margin-left: 1em;
+    padding: 0;
+    list-style: none outside;
+    text-align: left;
+ }
+ 
+ 
+ 
+ 
+ .menu-item {
+    margin: 0;
+    padding-top: 0.2em;
+ }
+ 
+ ul.tabs {
+    margin: 0 0 0.5em;
+    padding: 0;
+    list-style: none;
+ }
+ 
+ 
+ .tabs > li {
+    display: inline-block;
+    margin-right: 0.3em;
+ }
+ /* Your existing footer styles */
+ .footer {
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #004339;
+    color: white;
+    padding-top: 0;
+    padding-bottom: 2rem;
+    position: absolute; /* You can adjust this if needed */
+ }
+ 
+ 
+ @media screen and (min-width: 700px) {
+    .footer {
+        padding-left:3rem;
+        padding-right: 3rem;
+    }
+ }
+ 
+ 
+ @media screen and (min-width: 1201px) {
+    .footer {
+        padding-left:4rem;
+        padding-right: 4rem;
+    }
+ }
+ 
+ 
+ @media screen and (min-width: 700px) {
+    .footer {
+        padding-left:1.5rem;
+        padding-right: 1.5rem;
+    }
+ }
+ 
+ 
+ @media screen and (min-width: 1201px) {
+    .footer {
+        padding:1.5rem 4rem 3.5rem;
+    }
+ }
+ 
+ 
+ .footer a {
+    color: #ffda93;
+    transition: 0.3s ease;
+    text-decoration: none;
+    text-decoration-color: white;
+ }
+ 
+ 
+ .footer a:hover,.footer a:focus {
+    color: white;
+    text-decoration-color: white;
+    text-decoration: underline;
+ }
+ 
+ 
+ .footer .footer__first {
+    padding: 2rem 0 1rem 0;
+ }
+ 
+ 
+ @media screen and (min-width: 1201px) {
+    .footer .footer__first {
+        width:240px;
+        float: left;
+        padding: 1.3rem 0 0 0;
+    }
+ }
+ 
+ 
+ .footer .footer__first > * {
+    display: inline-block;
+ }
+ 
+ 
+ .footer .footer__first .footer__logo {
+    margin-right: 1rem;
+ }
+ 
+ 
+ .footer .footer__first .footer__address {
+    line-height: 1.5;
+    font-style: normal;
+ }
+ 
+ 
+ @media screen and (min-width: 1201px) {
+    .footer .footer__first .footer__address {
+        display:block;
+        margin-top: 1rem;
+    }
+ }
+ 
+ 
+ @media screen and (min-width: 1201px) {
+    .footer .footer__second {
+        padding:2rem 0 2rem 240px;
+    }
+ }
+ 
+ 
+ .footer .footer__second .footer__menu .menu {
+    margin: 0;
+ }
+ 
+ 
+ @media screen and (min-width: 1201px) {
+    .footer .footer__second .footer__menu .menu {
+        font-size:1.313rem;
+    }
+ }
+ 
+ 
+ .footer .footer__second .footer__menu .menu .menu-item {
+    padding-right: 1rem;
+    font-size: 1.125rem;
+    font-family: "Domine",Georgia,serif;
+    font-weight: 500;
+    line-height: 2;
+ }
+ 
+ 
+ @media screen and (min-width: 700px) {
+    .footer .footer__second .footer__menu .menu .menu-item {
+        padding-top:0;
+        display: inline-block;
+        line-height: 1.5;
+        padding-right: 1.9rem;
+    }
+ }
+ 
+ 
+ @media screen and (min-width: 1201px) {
+    .footer .footer__second .footer__menu .menu .menu-item {
+        font-size:1.313rem;
+    }
+ }
+ 
+ 
+ .footer .footer__second .footer__menu .menu .menu-item--collapsed {
+    list-style: none;
+ }
+ 
+ 
+ .footer .footer__second .footer__second-last {
+    display: block;
+    margin-bottom: 2rem;
+ }
+ 
+ 
+ @media screen and (min-width: 700px) {
+    .footer .footer__second .footer__second-last {
+        display:flex;
+        justify-content: space-between;
+        height: 100%;
+    }
+ }
+ 
+ 
+ @media screen and (min-width: 1201px) {
+    .footer .footer__second .footer__second-last {
+        margin-bottom:0.3rem;
+    }
+ }
+ 
+ 
+ .footer .footer__second .footer__phones {
+    margin-top: 1rem;
+    line-height: 1.3;
+    display:inline-block;
+ }
+ 
+ 
+ @media screen and (min-width: 1201px) {
+    .footer .footer__second .footer__phones {
+        margin-top:2rem;
+    }
+ }
+ 
+ 
+ .footer .footer__second .footer__phones .footer-phone {
+    margin-top: 1rem;
+ }
+ 
+ 
+ @media screen and (min-width: 700px) {
+    .footer .footer__second .footer__phones .footer-phone {
+        margin-top:0.2rem;
+    }
+ }
+ 
+ 
+ .footer .footer__second .footer__phones .footer-phone:first-child {
+    margin-top: 0;
+ }
+ 
+ 
+ @media screen and (min-width: 700px) {
+    .footer .footer__second .footer__phones .footer-phone * {
+        display:inline-block;
+    }
+ }
+ 
+ 
+ .footer .footer__second .footer__phones .field--type-telephone {
+  
+    margin-right: 1rem;
+ }
+ 
+ 
+ .footer .footer__second .footer__phones .field--type-telephone a {
+    color: white;
+ }
+ 
+ 
+ .footer .footer__second .footer__phones .footer-phone__name {
+    text-transform: uppercase;
+    font-weight: 700;
+ }
+ 
+ 
+ .footer .footer__second .social-icons {
+    display: inline-block;
+    align-self: flex-end;
+    margin-top: 2rem;
+    width: 100%;
+ }
+ 
+ 
+ @media screen and (min-width: 700px) {
+    .footer .footer__second .social-icons {
+        width:auto;
+        margin-top: 1rem;
+    }
+ }
+ 
+ 
+ .footer .footer__second .social-icons .footer__social {
+    display: inline-block;
+ }
+ 
+ 
+ .footer .footer__second .social-icons .footer__social .social-icon {
+    margin-right: 1.313rem;
+    display: inherit;
+    line-height: 1;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    font-family: icomoon;
+    font-size: 1.75rem;
+    transition: 0.3s ease;
+    font-weight: 300;
+ }
+ 
+ 
+ @media screen and (min-width: 700px) {
+    .footer .footer__second .social-icons .footer__social .social-icon {
+        margin-right:0;
+        margin-left: 1.313rem;
+    }
+ }
+ 
+ 
+ @media screen and (min-width: 1201px) {
+    .footer .footer__second .social-icons .footer__social .social-icon {
+        margin-left:2rem;
+    }
+ }
+ 
+ 
+ .footer .footer__second .social-icons .footer__social .social-icon:hover,.footer .footer__second .social-icons .footer__social .social-icon:focus {
+    fill: white;
+    text-decoration: none;
+ }
+ 
+ 
+ .footer .footer__second .social-icons .footer__social .social-icon--twitter::before {
+    content: "\e900";
+ }
+ 
+ 
+ .footer .footer__second .social-icons .footer__social .social-icon--facebook::before {
+    content: "\ea91";
+ }
+ 
+ 
+ .footer .footer__second .social-icons .footer__social .social-icon--instagram::before {
+    content: "\ea92";
+ }
+ 
+ 
+ .footer .footer__second .social-icons .footer__social .social-icon--linkedin::before {
+    content: "\eac9";
+ }
+ 
+ 
+ .footer .footer__second .social-icons .footer__social .social-icon--youtube::before {
+    content: "\e912";
+ }
+ 
+ 
+ .footer .footer__last {
+    border-top: 1px solid #54a99d;
+    color: #b2d1cd;
+    font-size: 0.875rem;
+    margin-top: 1rem;
+    padding-top: 0.2rem;
+    line-height: 1.3;
+ }
+ 
+ 
+ @media screen and (min-width: 700px) {
+    .footer .footer__last {
+        margin-top:0;
+    }
+ }
+ 
+ 
+ @media screen and (min-width: 700px) {
+    .footer .footer__last * {
+        display:inline-block;
+    }
+ }
+ 
+ 
+ .footer .footer__last * * {
+    display: inline-block;
+ }
+ 
+ 
+ @media screen and (min-width: 700px) {
+    .footer .footer__last > nav {
+        float:left;
+    }
+ }
+ 
+ 
+ .footer .footer__last .menu-item,.footer .footer__last a {
+    color: inherit;
+    font-size: inherit;
+ }
+ 
+ 
+ .footer .footer__last .copyright {
+    margin-bottom: 0.3rem;
+    float: left;
+ }
+ 
+ 
+ .footer .footer__last .copyright__first {
+    margin-right: 0.5rem;
+ }
+ 
+ 
+ .footer .footer__last .footer__utility {
+    float: none;
+ }
+ 
+ 
+ @media screen and (min-width: 700px) {
+    .footer .footer__last .footer__utility {
+        float:right;
+    }
+ }
+ 
+ 
+ .footer .footer__last .footer__utility .menu {
+    margin: 0;
+ }
+ 
+ 
+ .footer .footer__last .footer__utility .menu-item {
+    margin-right: 1rem;
+    padding-top: 0;
+ }
+ 
+ 
+ @media screen and (min-width: 700px) {
+    .footer .footer__last .footer__utility .menu-item {
+        margin-right:0;
+        margin-left: 1rem;
+    }
+ }
+ 
+ 
+ .footer .footer__back-to-top {
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+    position: absolute;
+    top: -20px;
+    right: 0;
+ }
+ 
+ 
+ @media screen and (min-width: 700px) {
+    .footer .footer__back-to-top {
+        padding-left:1.5rem;
+        padding-right: 1.5rem;
+    }
+ }
+ 
+ 
+ @media screen and (min-width: 1201px) {
+    .footer .footer__back-to-top {
+        padding-left:1.875rem;
+        padding-right: 1.875rem;
+    }
+ }
+ 
+ 
+ .footer .footer__back-to-top button {
+    height: 40px;
+    width: 40px;
+    text-align: center;
+    border: solid 10px #ffda93;
+    cursor: pointer;
+    padding: 0;
+    background-color: #ffda93;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: url(/themes/custom/njcu_theme/media/arrow.svg);
+ }
+ 
+ 
+ .footer .footer__back-to-top button:hover,.footer .footer__back-to-top button:focus {
+    background-color: #fab731;
+    border-color: #fab731;
+ }
+ 
+ 
+ .footer ul.menu a.is-active {
+    color: #ffda93;
+ }
+ 
+ 
+ .footer ul.menu a.is-active:hover,.footer ul.menu a.is-active:focus {
+    color: white;
+ }
+ 
+ 
+ .logo {
+    width: 120px;
+ }
+ 
+ 
+ @media screen and (min-width: 700px) {
+    .logo {
+        width:150px;
+    }
+ }
+ 
+ 
+ @media screen and (min-width: 1201px) {
+    .logo {
+        width:190px;
+    }
+ }
+ @media screen and (min-width: 1201px) {
+    .logo {
+        width:190px;
+    }
+ }
+ a.skip-link.visually-hidden:focus {
+    background-color: #ffffff;
+    padding: 3px 10px;
+    position: absolute !important;
+    z-index: 10000;
+ }
+ 
+ 
+ a.skip-link {
+    color: #000000;
+ }
+ 
+ 
+ .visually-hidden {
+    position: absolute !important;
+    overflow: hidden;
+    clip: rect(1px, 1px, 1px, 1px);
+    width: 1px;
+    height: 1px;
+    word-wrap: normal;
+ }
+ a.skip-link.visually-hidden:focus {
+    background-color: #ffffff;
+    padding: 3px 10px;
+    position: absolute !important;
+    z-index: 10000;
+ }
+ 
+ 
+ a.skip-link {
+    color: #000000;
+ }
+ *{
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+ }
+ 
+ 
+ .contextual-region.profile {
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+ }
+ 
+ 
+ @media screen and (min-width: 700px) {
+    .contextual-region.profile {
+        padding-left:3rem;
+        padding-right: 3rem;
+    }
+ }
+ 
+ 
+ @media screen and (min-width: 1201px) {
+    .contextual-region.profile {
+        padding-left:4rem;
+        padding-right: 4rem;
+    }
+ }
+ 
+
+
+
+ 

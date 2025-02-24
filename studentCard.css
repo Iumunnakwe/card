@@ -1,0 +1,689 @@
+@media (min-width: 320px) and (max-width:1440px ) {
+
+html, body {
+    height: 100%;  /* Ensure that both html and body take up the full height of the viewport */
+    margin: 0;     /* Remove any default margin */
+    padding: 0;    /* Remove any default padding */
+  /*  overflow-x: auto; /* Prevent horizontal scrolling */
+   /* overflow-y: auto;  /* Allow vertical scrolling when the content exceeds the viewport */
+}
+.container {
+    width: 100vw;
+    max-width: 2000px;
+    height: 40vh;
+    background-color: rgb(2, 39, 2);
+    background-size: cover; /* Ensures the image covers the container */
+    background-position: center center;
+    display: flex;
+    justify-content: space-between; /* Distribute space between text and image */
+    align-items: center; /* Align items vertically centered */
+    text-align: left; /* Align text to the left */
+    font-size: 30px;
+    color: white;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    margin-bottom: 0;
+    overflow-x: hidden;
+}
+
+/* Text Section on the Left */
+.container .text {
+    flex: 1; /* Take up equal space */
+    padding-left: 3em; /* Optional padding on the left side */
+    color: gold;
+}
+
+/* Image Section on the Right */
+.container .image {
+    flex: 1; /* Take up equal space */
+    height: 100%; /* Make sure image takes full container height */
+    background-image: url(header_initialCard.webp);
+    background-size: cover; /* Ensures the image covers the div */
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+
+header {
+    background: #333;
+    color: white;
+    padding: 1em 0;
+}
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    background-color: #f4f4f4;
+        overflow-x: hidden;
+/*    overflow-y: auto;*/
+   /* min-height: 150vh; */
+}
+.box {
+    margin-right: 0;  /* Remove the left margin and allow content to align better */
+    padding: 20px;
+    flex-grow: 1;
+    text-align: left; /* Align content to the left (or right based on your design) */
+    font-family: Arial, sans-serif;
+    text-align: left;
+    margin-left: 390px; /* Same as .box margin-left for alignment */
+    margin-right: 50px; /* Remove right margin to avoid pushing it too far */
+    margin-top: 10px;  /* Add space between the button and the dropdown */
+    position: relative; /* Ensure it's in the document flow */
+}
+
+.box a {
+    color: green;
+    text-decoration: none;  /* Removes underlines from links */
+}
+
+.box a:hover {
+    border-bottom: 1px solid #4CAF50;
+}
+
+
+.box h1{
+    font-size: 50px;
+}
+
+
+nav.prpl-left-menu {
+    position: absolute;
+    left: 43px;
+    top: 40vh;
+    width: 250px; /* Width of the menu */
+    z-index: 20;
+    background-color: #f9f9f9; /* Light gray background resembling a notebook page */
+    padding: 1em; /* Padding to create space inside */
+    margin: 2em 0em;
+    border: 1px solid #e1e1e1; /* Subtle border for the "page" look */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Soft shadow to make it look like a floating paper */
+    border-radius: 8px; /* Rounded corners for a softer, notebook-style look */
+    background: linear-gradient(white, #f9f9f9); /* Subtle gradient to add some depth */
+    box-sizing: border-box; /* Ensures padding is included in the width/height */
+}
+
+/* Styling for the unordered list */
+.prpl-left-menu > ul {
+    margin: 0;
+    font-size: 1em;
+    padding: 0;
+    list-style-type: none;
+    text-align: left;
+}
+
+/* List items' border and margin for spacing */
+.prpl-left-menu > ul > li {
+    border-top: 0.08em solid #DDDDE2; /* Border between items */
+    margin-bottom: 0.5em; /* Reduced space between items */
+    padding-bottom: 5px; /* Minimal space before the line */
+}
+
+/* First and last item border adjustments */
+.prpl-left-menu > ul > li:first-child {
+    border-top: none;
+}
+
+.prpl-left-menu > ul > li:last-child {
+    border-bottom: 0.08em solid #DDDDE2;
+}
+
+/* Styling for links (no underline, subtle hover effects) */
+.prpl-left-menu > ul > li > a {
+    color: #727580;
+    font-weight: 400;
+    display: block;
+    padding: 0.3em 0;
+    text-decoration: none;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Current page item styling */
+.prpl-left-menu > ul > li.current-page {
+    position: relative;
+}
+
+/* Styling for the current page item */
+.prpl-left-menu > ul > li.current-page:before {
+    display: block;
+    position: absolute;
+    z-index: -1;
+    overflow: hidden;
+    content: " ";
+    width: 0.5em;
+    background-color: #28a745; /* Green highlight */
+    left: 0;
+    top: 0;
+    bottom: 0;
+}
+
+/* Styling for the current page link */
+.prpl-left-menu > ul > li.current-page > a {
+    border-left: 0.5em solid #28a745; /* Green border on the left */
+    padding-left: 1em;
+    color: gold;
+    font-weight: 700; /* Make text bold */
+}
+
+/* Nested unordered list */
+.prpl-left-menu > ul > li ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0.5em 0 0.5em 1.5em;
+}
+
+/* Nested list items */
+.prpl-left-menu > ul > li ul li {
+    margin: 0.25em 0;
+}
+
+/* Nested list item link styles */
+.prpl-left-menu > ul > li ul li a {
+    font-size: 0.9em;
+    color: #727580;
+    font-weight: 400;
+    display: block;
+}
+
+/* Current page styling for nested items */
+.prpl-left-menu > ul > li ul li.current-page > a {
+    color: #333;
+    font-weight: 700;
+}
+
+/* Optional: Adding a slightly worn effect to make it look more like a notebook */
+/* .prpl-left-menu {
+    background: url('https://www.example.com/your-texture-image.jpg') repeat; /* Add a subtle paper texture here if you like */
+} */
+
+
+/* Main Content Section */
+h1, h2, p {
+    margin-left: 20px;  /* Optional: Add some left margin to ensure the text doesn't touch the edge */
+}
+
+/* Buttons Styling */
+a button {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    text-align: center;
+}
+
+a button:hover {
+    background-color: #45a049;
+}
+
+/* Dropdown Menu Styling */
+.dropdown {
+   /* position: relative;*/
+    display: inline-block;
+    margin-right: 10px;  /* Match this to align with the box class */
+   /* text-align: right;  /* Align content within dropdown the same as box */
+    padding: 20px;  /* Adjust padding if needed */
+    display: table-row; 
+    margin-top: -4000px;
+
+}
+
+.cardbtn{
+    background-color: #4CAF50;
+    padding: 10px 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    width: 50vw; 
+    color: white; 
+}
+
+.cardbtn a {
+    color: white;  /* Ensure the text inside the link is white */
+    text-decoration: none;  /* Remove the underline */
+}
+
+.cardbtn a:hover {
+    text-decoration: none;  /* Optional: keep the link style consistent on hover */
+}
+
+
+/* Dropdown button color */
+.dropdown .cardbtn a {
+    color: white; /* Ensuring text in the dropdown button is white */
+    cursor: pointer;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.dropdown-phone {
+    /* position: relative;*/
+     display: inline-block;
+     margin-right: 10px;  /* Match this to align with the box class */
+    /* text-align: right;  /* Align content within dropdown the same as box */
+     padding: 20px;  /* Adjust padding if needed */
+     display: table-row; 
+     margin-top: -4000px;
+      display: none;
+ }
+ 
+
+/* Dropdown button */
+/* Dropdown button */
+/* Dropdown button */
+/* Dropdown button */
+/* Dropdown button styling similar to contact info header */
+.dropbtn {
+    position: relative;
+    top: -1.15em;
+    margin-left: 350px; /* Same as .box margin-left for alignment */
+    width: 65vw; /* Adjust width as needed */
+    padding: 1.25em 2em;
+    background-color: green; /* Same green as contact info header */
+    color: white;
+    font-size: 16px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    border: none;
+    cursor: pointer;
+    display: inline-block;
+    z-index: 101; /* Ensure it stays on top */
+    margin-bottom: 10px; /* Space below the button for separation */
+}
+
+/* Adding skew effect and red bar similar to contact-info-header */
+.dropbtn:after {
+    content: "";
+    position: absolute;
+    z-index: -1; /* Ensure the red bar stays behind text */
+    top: 0;
+    bottom: 0;
+    right: -0.8em;
+    width: 5em;
+    background-color: #D1190D; /* Red color bar */
+    transform: skew(-20deg);
+    transform-origin: bottom;
+}
+
+/* For the button hover effect */
+.dropbtn:hover {
+    background-color: #45a049; /* Slightly darker green when hovered */
+}
+
+.dropbtn-phone {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    width: 50vw;  /* Adjust width as needed */
+    margin-left: 390px; /* Same as .box margin-left for alignment */
+    margin-right: 50px; /* Remove right margin to avoid pushing it too far */
+    z-index: 101;  /* Ensure button has higher z-index */
+    display: block; /* Ensure it behaves like a block element */
+    margin-bottom: 10px; /* Space below the button for separation */
+    display: none;
+
+}
+
+/* Dropdown content (We want this to push content below) */
+.dropdown-content {
+    display: none;
+    background-color: #f9f9f9;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 100; /* Ensure dropdown content is below button */
+    font-family: Arial, sans-serif;
+    text-align: left;
+    padding: 20px;
+    width: 47.3vw;
+    margin-left: 426px; /* Same as .box margin-left for alignment */
+    width: 60vw; /* Adjust width as needed */
+    margin-right: 90px; /* Remove right margin to avoid pushing it too far */
+    margin-top: 0px;  /* Add space between the button and the dropdown */
+    margin-bottom: 30px;
+    position: relative; /* Ensure it's in the document flow */
+    border-radius: 8px;  /* Optional: rounded corners for a smoother look */
+}
+.dropdown-content-phone {
+    display: none;
+    background-color: #f9f9f9;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 100; /* Ensure dropdown content is below button */
+    font-family: Arial, sans-serif;
+    text-align: left;
+    padding: 20px;
+    width: 47.3vw;
+    margin-left: 390px; /* Same as .box margin-left for alignment */
+    margin-right: 50px; /* Remove right margin to avoid pushing it too far */
+    margin-top: 10px;  /* Add space between the button and the dropdown */
+    position: relative; /* Ensure it's in the document flow */
+    border-radius: 8px;  /* Optional: rounded corners for a smoother look */
+}
+
+/* Show the dropdown menu when it's active */
+.dropdown.show .dropdown-content {
+    display: block;
+}
+
+/* Style the links inside the dropdown */
+.dropdown-content a {
+    color: green;
+    text-decoration: none;  /* Removes underlines from links */
+}
+
+/* Space between list items inside the dropdown */
+.dropdown-content ol li {
+    margin-bottom: 12px;  /* More space between list items */
+}
+
+/* Styling for the heading and paragraphs within the dropdown */
+.dropdown-content h3, .dropdown-content p {
+    margin-bottom: 10px; /* Space between sections within the dropdown */
+}
+
+ol, ul {
+    box-sizing: border-box;
+}
+
+ol {
+    display: block;
+    list-style-type: decimal;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    padding-inline-start: 40px;
+    unicode-bidi: isolate;
+}
+
+
+/* Change color when hovering over dropdown items */
+.dropdown-content a:hover {
+    border-bottom: 1px solid #4CAF50;
+}
+.prpl-step-group {
+    display: table; /* Makes this div behave like a table */
+    width: 100%; /* Take up full width */
+    margin: 1em 0;
+    text-align: center; /* Center the buttons inside the table cells */
+}
+/* Show the dropdown menu when hovering over the dropdown button 
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+*/
+
+
+
+
+
+
+
+
+.contact-info {
+    position: relative;
+    margin: 3.15em 0;
+    padding: 4.5em 2em 2.5em;
+    background-color: #f7f8fc;
+    width: 70vw;
+    right: 50;
+    margin-left: 390px; /* Same as .box margin-left for alignment */
+    margin-right: 50px; /* Remove right margin to avoid pushing it too far */
+}
+
+.contact-info .contact-info-header {
+    position: absolute;
+    top: -1.15em;
+    left: 0;
+    width: 30vw;
+    display: inline-block;
+    padding: 1.25em 2em;
+    background-color: green;
+}
+
+.contact-info-body{
+    text-align: left; /* Align content to the left (or right based on your design) */
+    font-family: Arial, sans-serif;
+    margin-top: 10px;  /* Add space between the button and the dropdown */
+    position: relative; /* Ensure it's in the document flow */
+    margin-left: 0; /* Remove the margin-left */
+}
+
+.contact-info .contact-info-header:after {
+    content: "";
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    bottom: 0;
+    right: -.8em;
+    width: 5em;
+    background-color: #D1190D;
+    -webkit-transform: skew(-20deg);
+    transform: skew(-20deg);
+    transform-origin: bottom;
+    -o-transform-origin: bottom;
+    -ms-transform-origin: bottom;
+    -webkit-transform-origin: bottom;
+    -moz-transform-origin: bottom
+}
+
+.contact-info .contact-info-header>span {
+    position: relative;
+    z-index: 2;
+    margin: 0;
+    color: #fff;
+    font-size: .875em;
+    text-transform: uppercase;
+    letter-spacing: .06em;
+    font-weight: 700
+}
+
+.contact-info .contact-info-body .contact-info-group:not(:last-of-type) {
+    margin-bottom: .75em
+}
+
+.contact-info .contact-info-body dl {
+    margin: 0
+}
+
+.contact-info .contact-info-body dl dt,.contact-info .contact-info-body dl dd {
+    display: block
+}
+
+.contact-info .contact-info-body dl dt {
+    width: 13%;
+    margin-top: 0;
+    margin-bottom: .10em;
+    color: #333;
+    font-weight: 700
+}
+
+.contact-info .contact-info-body dl dd {
+    clear: none;
+    margin: 0;
+    padding-left: 0;
+    vertical-align: middle;
+    color: #4f545d;
+    font-weight: 400
+}
+
+.contact-info .contact-info-body .contact-info-map-link {
+    display: inline-block
+}
+
+@media(min-width: 720px) {
+    
+    .contact-info .contact-info-body:after {
+        right:-1.45em;
+        width: 2.15em
+    }
+
+    .contact-info .contact-info-body dl dt,.contact-info .contact-info-body dl dd {
+        display: inline-block;
+        margin: 0
+    }
+
+    .prpl-column .contact-info .contact-info-body dl dt {
+        width: 5em
+    }
+
+    .contact-info .contact-info-body .contact-info-map-link {
+        display: inline-block;
+        margin-left: .75em
+    }
+}
+
+@media (max-width: 719px) {
+    .contact-info {
+        position: flex;
+        left: -290px;  /* Initially hidden */
+    }
+    .contact-info .contact-info-header {
+        width:65%
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* For mobile layout */
+@media (min-width: 320px) and (max-width:760px) {
+    /* Adjust the container */
+    .body{
+        overflow-x: hidden;
+    }
+    .container {
+        height: 40vh;
+        background-size: cover;
+        width: 100vw;
+        /* align-items: right;
+        text-align: right; Align content to the right */
+        font-size: 20px;
+        color: black;
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        overflow-x: hidden;
+        text-align: center;
+    }
+
+    /* Adjust main content (box) */
+    .box {
+        margin-left: 0;
+        margin-right: 0;
+        font-size: 18px;
+        padding: 10px;
+        text-align: center;
+    }
+
+    /* Modify the left menu for mobile */
+    .prpl-left-menu {
+        width: 250px;
+        height: auto;
+        position: fixed;
+        top: 0;
+        left: -250px;  /* Initially hidden */
+        background-color: #f4f4f4;
+        transition: left 0.3s ease;
+        z-index: 100;
+        box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+        padding: 20px;
+        display: none;
+    }
+
+    /* Show the menu when toggled */
+    .prpl-left-menu.open {
+        left: 0;  /* Slide the menu in */
+    }
+
+    /* Toggle button styling for mobile */
+    .menu-toggle {
+        display: block;
+        background-color: #4CAF50;
+        color: white;
+        padding: 15px;
+        font-size: 18px;
+        border: none;
+        cursor: pointer;
+        position: fixed;
+        top: 20px;
+        left: 20px;
+        z-index: 101;
+    }
+    .dropdown {
+        display: contents; /* Show the dropdown button on mobile */
+    }
+    /* Adjust dropdown button for mobile */
+    .dropbtn {
+        width: 100vw;
+        margin-left: auto;
+        margin-right: auto;
+        padding: 15px;
+    }
+
+    /* Adjust the dropdown content */
+    .dropdown-content {
+        width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .dropdown-phone {
+        display: contents; /* Show the dropdown button on mobile */
+    }
+    /* Adjust dropdown button for mobile */
+    .dropbtn-phone {
+        width: 100vw;
+        margin-left: auto;
+        margin-right: auto;
+        padding: 15px;
+        display: contents;
+        background-color: #4CAF50;
+        color: white;
+        font-size: 16px;
+        cursor: pointer;
+        display: block; /* Ensure it behaves like a block element */
+    }
+
+    /* Adjust the dropdown content */
+    .dropdown-content-phone {
+        width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+        
+    }
+}

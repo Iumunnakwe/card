@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Card Services</title>
+    <link rel="stylesheet" href="style.css">
+          <link rel="stylesheet" href="icomoon/style.css">  <!-- Correct IcoMoon styles -->
+        <!--   <link rel="stylesheet" href="icomoon/demo-files/demo.css">  If demo.css is needed for testing -->
+          
+     
+</head>
+<body>
+    <!-- Container for background image -->
+    <div class="container">
+        <h1>Campus Cards</h1>
+    </div>
+
+    <!-- Buttons Section -->
+    <div class="button-container">
+      <!-- New Student ID Cards -->
+   
+          <div class="background-holder" style="background-image: url('https://www.montclair.edu/responsive-media/cache/id-card/wp-content/uploads/sites/134/2024/07/PXL_20240724_161609619-X2.jpg.0.2x.generic.jpg');">
+              <div class="split-button">
+                  <div class="left" onclick="window.location.href='studentCard.html';">New Student ID Cards</div>
+                  <div class="right" onclick="window.location.href='hours.html';">Hours</div>
+              </div>
+          </div>
+      
+      
+      <!-- Lost or Stolen University ID Cards -->
+      <a href="replacementCard.html">
+          <div class="background-holder" style="background-image: url('https://www.montclair.edu/responsive-media/cache/id-card/wp-content/uploads/sites/134/2024/07/03202023_0742_Around_Campus-LAROSA.jpg.1.2x.generic.jpg');">
+              <div class="split-button">
+                  <div class="left" onclick="actionLeft()">Lost or Stolen ID</div>
+                  <div class="right" onclick="actionRight()">Report</div>
+              </div>
+          </div>
+      </a>
+      
+      <!-- Faculty, Staff, and Affiliate ID Cards -->
+      <a href="faculty.html">
+          <div class="background-holder" style="background-image: url('https://www.montclair.edu/responsive-media/cache/id-card/wp-content/uploads/sites/134/2024/07/PXL_20240724_162247987-X2.jpg.0.2x.generic.jpg');">
+              <div class="split-button">
+                  <div class="left" onclick="actionLeft()">Faculty Cards</div>
+                  <div class="right" onclick="actionRight()">Details</div>
+              </div>
+          </div>
+      </a>
+      
+      <!-- Alumni ID Cards -->
+      <a href="alumni.html">
+          <div class="background-holder" style="background-image: url('https://www.montclair.edu/responsive-media/cache/id-card/wp-content/uploads/sites/134/2024/07/041906_Campus_033.jpg.1.2x.generic.jpg');">
+              <div class="split-button">
+                  <div class="left" onclick="actionLeft()">Alumni Cards</div>
+                  <div class="right" onclick="actionRight()">Learn More</div>
+              </div>
+          </div>
+      </a>
+  
+      <!-- Additional Buttons with Background Images -->
+      <!-- Add other buttons as needed -->
+  </div>
+  
+  
+    
+    
+    <!-- Heading and Paragraph -->
+    <h2>Manage Your ID Card Easily</h2>
+    <p>Access services, check balances, and request replacements online.</p>
+
+
+    <div class="prpl-band lt-gray scalable image-right">
+        <div class="image-wrapper">
+          <img 
+            decoding="async" 
+            class="mlt-responsive-image" 
+            data-original-image="/id-card/wp-content/uploads/sites/134/2024/07/022018_5174_Recreation-Center-X3-1.jpg" 
+            src="https://www.montclair.edu/responsive-media/cache/id-card/wp-content/uploads/sites/134/2024/07/022018_5174_Recreation-Center-X3-1.jpg.1.2x.generic.jpg" 
+            alt="Student checking at the Student Recreation Center desk.">
+        </div>
+        <div class="text-content">
+          <h2>About Your ID Card</h2>
+          <p>All members of the Montclair State University community are required to have and carry their University-issued ID card while on campus. University ID cards are also used to access:</p>
+          <ul>
+            <li>Meal Plans, Flex, and Red Hawk Dollars</li>
+            <li>Entrance into the Student Recreation Center</li>
+            <li>Print labs</li>
+            <li>Residence Hall access</li>
+            <li>and more!</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="prpl-band scalable image-left">
+        <div class="image-wrapper">
+          <img decoding="async" class="mlt-responsive-image" 
+            data-original-image="/id-card/wp-content/uploads/sites/134/2024/07/zcfjro80HblzUl07-1.png" 
+            src="https://www.montclair.edu/responsive-media/cache/id-card/wp-content/uploads/sites/134/2024/07/zcfjro80HblzUl07-1.png.3.2x.generic.jpg" 
+            alt="eAccounts logo">
+        </div>
+        <div class="text-content">
+          <h2>eAccounts</h2>
+          <p>Visit the University’s <a href="https://eacct-montclair-sp.transactcampus.com/eAccounts/AnonymousHome.aspx"><strong>eAccounts website</strong></a> or download the app for <a href="https://apps.apple.com/us/app/transact-eaccounts/id1493974212"><strong>Apple</strong></a> or <a href="https://play.google.com/store/apps/details?id=com.blackboard.transact.android.v2&amp;hl=en_US&amp;pli=1"><strong>Android</strong></a> for 24/7 service to:</p>
+          <ul>
+            <li>Purchase Red Hawk Dollars with your Visa, Mastercard, or Discover card (2.75% service fee associated).</li>
+            <li>Disable the use of your ID card by marking all card numbers “Lost” if your ID card is lost or stolen.</li>
+            <li>View your current use of Red Hawk Dollars, Flex Dollars, and/or meal plan.</li>
+            <li>Upload a photo for your ID card in the “Profile” section.</li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="prpl-band lt-gray scalable image-right">
+        <div class="image-wrapper">
+          <img decoding="async" class="mlt-responsive-image" 
+            data-original-image="/id-card/wp-content/uploads/sites/134/2024/07/042224_23443_Students-on-campus-X2.jpg" 
+            src="https://www.montclair.edu/responsive-media/cache/id-card/wp-content/uploads/sites/134/2024/07/042224_23443_Students-on-campus-X2.jpg.3.2x.generic.jpg" 
+            alt="Student sitting in lounge chair outside on laptop.">
+        </div>
+        <div class="text-content">
+          <h2>Questions?</h2>
+          <p>Email <a href="mailto:cardservices@montclair.edu">cardservices@montclair.edu</a> with your questions. You will receive an auto reply to your email, check your spam or junk folder if you do not see it. Please review the information below as it provides answers to most frequently asked questions.</p>
+        </div>
+      </div>
+      
+
+
+
+
+
+
+
+
+
+        
+
+      <footer role="contentinfo">
+        <div class="region region-footer">
+    <div id="block-njcu-theme-ifde-site-footer" class="settings-tray-editable block block-ifde-wrapper block-ifde-footer-block" data-drupal-settingstray="editable">
+  
+    
+      <div class="footer">
+  
+  
+<div class="footer__first">
+        
+      <div class="footer__logo logo">  <a href="https://www.njcu.edu/"><img loading="lazy" src="/sites/default/files/logo/2022-11/NJCU_WebsiteFooter.svg" alt="New Jersey City University" typeof="Image"></a>
+
+</div>
+      
+  
+
+    
+      <address class="footer__address"><p>2039 Kennedy Blvd<br>
+Jersey City, NJ 07305</p>
+</address>
+      
+  
+
+
+  </div>
+<div class="footer__second">
+        
+      <nav class="footer__menu" role="navigation" aria-label="Footer">
+
+              <ul class="menu">
+                    <li class="menu-item menu-item--collapsed">
+        <a href="/about" data-drupal-link-system-path="node/3">About</a>
+              </li>
+                <li class="menu-item menu-item--collapsed">
+        <a href="/admissions-aid" data-drupal-link-system-path="node/4">Admissions &amp; Aid</a>
+              </li>
+                <li class="menu-item menu-item--collapsed">
+        <a href="/academics" data-drupal-link-system-path="node/5">Academics</a>
+              </li>
+                <li class="menu-item menu-item--collapsed">
+        <a href="/student-life" data-drupal-link-system-path="node/6">Student Life</a>
+              </li>
+                <li class="menu-item menu-item--collapsed">
+        <a href="/community" data-drupal-link-system-path="node/7">Community</a>
+              </li>
+        </ul>
+  
+
+
+</nav>
+      
+  
+
+
+<div class="footer__second-last">
+        
+            <div class="footer__phones">
+            <div class="footer-phone">
+
+            <div class="field field--name-field-p-footer-phone-number field--type-telephone field--label-hidden field__item"><a href="tel:201-200-3234">201-200-3234</a></div>
+          
+      <div class="footer-phone__name">Undergraduate Admissions</div>
+      
+  
+
+
+
+</div>
+      <div class="footer-phone">
+
+            <div class="field field--name-field-p-footer-phone-number field--type-telephone field--label-hidden field__item"><a href="tel:201-200-3409">201-200-3409</a></div>
+          
+      <div class="footer-phone__name">Graduate Admissions</div>
+      
+  
+
+
+
+</div>
+      <div class="footer-phone">
+
+            <div class="field field--name-field-p-footer-phone-number field--type-telephone field--label-hidden field__item"><a href="tel:201-200-2000">201-200-2000</a></div>
+          
+      <div class="footer-phone__name">General Info</div>
+      
+  
+
+
+
+</div>
+      
+      </div>
+  
+
+      <nav class="social-icons" role="navigation" aria-label="Social">
+        
+      <div class="footer__social">
+    
+            <a target="_blank" class="social-icon social-icon--facebook" href="https://www.facebook.com/NewJerseyCityUniversity">
+    <span class="visually-hidden">    
+            Facebook
+</span>
+</a>
+      
+  
+
+
+
+</div>
+      <div class="footer__social">
+    
+            <a target="_blank" class="social-icon social-icon--instagram" href="https://www.instagram.com/njcuniversity/">
+    <span class="visually-hidden">    
+            Instagram
+      
+  
+
+</span>
+</a>
+      
+  
+
+
+
+</div>
+      <div class="footer__social">
+    
+            <a target="_blank" class="social-icon social-icon--twitter" href="https://twitter.com/njcuniversity">
+    <span class="visually-hidden">    
+            Twitter
+      
+  
+
+</span>
+</a>
+      
+  
+
+
+
+</div>
+      <div class="footer__social">
+    
+            <a target="_blank" class="social-icon social-icon--linkedin" href="https://www.linkedin.com/school/new-jersey-city-university/">
+    <span class="visually-hidden">    
+            LinkedIn
+      
+  
+
+</span>
+</a>
+      
+  
+
+
+
+</div>
+      <div class="footer__social">
+    
+            <a target="_blank" class="social-icon social-icon--youtube" href="https://www.youtube.com/user/NJCUTUBE">
+    <span class="visually-hidden">    
+            YouTube
+      
+  
+
+</span>
+</a>
+      
+  
+
+
+
+</div>
+      
+  
+    </nav>
+
+
+  </div>
+  </div>
+<div class="footer__last">
+    
+<div class="footer__copyright copyright">
+        
+      <div class="copyright__first">©2024 New Jersey City University</div>
+      
+  
+
+    
+      <div class="copyright__second">All Rights Reserved</div>
+      
+  
+
+
+  </div>      <nav role="navigaton" aria-label="Utility">
+        
+      <div class="footer__utility">
+
+              <ul class="menu">
+                    <li class="menu-item">
+        <a href="/about/njcu-policies-and-standards/student-services-and-responsibilities-policies/equal-opportunity-access-online-resources" data-drupal-link-system-path="node/1866">Notice of Equal Opportunity Access to Online Resources</a>
+              </li>
+                <li class="menu-item">
+        <a href="https://blackboard.njcu.edu/webapps/login/" target="_blank">Blackboard</a>
+              </li>
+                <li class="menu-item">
+        <a href="/directories/offices-centers/human-resources/jobs-njcu" data-drupal-link-system-path="node/4526">Work at NJCU</a>
+              </li>
+        </ul>
+  
+
+
+</div>
+      
+  
+    </nav>
+
+
+  </div>    
+      <div class="footer__back-to-top"><button class="button button--back-to-top">
+  <span class="visually-hidden">Back To Top</span>
+</button></div>
+      
+  
+
+
+</div>
+
+
+  </div>
+
+  </div>
+
+    </footer>
+     
+        
+
+      
+    <script src="script.js"></script>
+</body>
+</html>
